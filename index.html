@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do Mundo 2026 - Painel Administrativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth-screen" class="container">
+        <div class="auth-box">
+            <h1>Copa do Mundo 2026</h1>
+            <p class="subtitle">Gerenciador de Figurinhas</p>
+
+            <div class="form-group">
+                <input type="email" id="auth-email" placeholder="E-mail">
+                <input type="password" id="auth-senha" placeholder="Senha">
+            </div>
+            <div class="auth-buttons">
+                <button id="btn-login" class="btn-primary">
+                    Entrar com E-mail
+                </button>
+                <button id="btn-cadastro" class="btn-secondary">
+                    Criar Conta
+                </button>
+                <div class="divider">ou</div>
+                <button id="btn-google" class="btn-google">
+                    Entrar com Google
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dashboard-screen" class="container wide hidden">
+
+        <header class="main-header">
+            <h2>Painel Copa do Mundo 2026</h2>
+            <div class="user-info">
+                <span id="user-display-name">
+                    Carregando...
+                </span>
+                <button id="btn-logout" class="btn-logout">
+                    Sair
+                </button>
+            </div>
+        </header>
+        <div class="dashboard-layout">
+            <section class="admin-sidebar">
+                <h3>Cadastrar Nova Figurinha</h3>
+                <div class="form-group">
+                    <label for="figurinha-nome"> Nome do Jogador </label>
+                    <input type="text" id="figurinha-nome" placeholder="Ex: Neymar Jr">
+                    <label for="figurinha-pais"> País / Categoria </label>
+                    <select id="figurinha-pais">
+                        <option value="FWC"> FWC (Página Inicial) </option>
+                        <option value="MEX">MEX (México)</option>
+                        <option value="RSA">RSA (África do Sul)</option>
+                        <option value="KOR">KOR (Coréia do Sul)</option>
+                        <option value="CZE">CZE (Rep. Tcheca)</option>
+                        <option value="CAN">CAN (Canadá)</option>
+                        <option value="BIH">BIH (Bósnia)</option>
+                        <option value="QAT">QAT (Qatar)</option>
+                        <option value="SUI">SUI (Suíça)</option>
+                        <option value="BRA">BRA (Brasil)</option>
+                        <option value="MAR">MAR (Marrocos)</option>
+                        <option value="HAI">HAI (Haiti)</option>
+                        <option value="SCO">SCO (Escócia)</option>
+                        <option value="USA">USA (Estados Unidos)</option>
+                        <option value="PAR">PAR (Paraguai)</option>
+                        <option value="AUS">AUS (Austrália)</option>
+                        <option value="TUR">TUR (Turquia)</option>
+                        <option value="GER">GER (Alemanha)</option>
+                        <option value="CUW">CUW (Curaçao)</option>
+                        <option value="CIV">CIV (Costa do Marfim)</option>
+                        <option value="ECU">ECU (Equador)</option>
+                        <option value="NED">NED (Holanda)</option>
+                        <option value="JPN">JPN (Japão)</option>
+                        <option value="SWE">SWE (Suécia)</option>
+                        <option value="TUN">TUN (Tunísia)</option>
+                        <option value="BEL">BEL (Bélgica)</option>
+                        <option value="EGY">EGY (Egito)</option>
+                        <option value="IRN">IRN (Irã)</option>
+                        <option value="NZL">NZL (Nova Zelândia)</option>
+                        <option value="ESP">ESP (Espanha)</option>
+                        <option value="CPV">CPV (Cabo Verde)</option>
+                        <option value="KSA">KSA (Arábia Saudita)</option>
+                        <option value="URU">URU (Uruguai)</option>
+                        <option value="FRA">FRA (França)</option>
+                        <option value="SEN">SEN (Senegal)</option>
+                        <option value="IRQ">IRQ (Iraque)</option>
+                        <option value="NOR">NOR (Noruega)</option>
+                        <option value="ARG">ARG (Argentina)</option>
+                        <option value="ALG">ALG (Algéria)</option>
+                        <option value="AUT">AUT (Áustria)</option>
+                        <option value="JOR">JOR (Jordânia)</option>
+                        <option value="POR">POR (Portugal)</option>
+                        <option value="COD">COD (Congo)</option>
+                        <option value="UZB">UZB (Uzbequistão)</option>
+                        <option value="COL">COL (Colômbia)</option>
+                        <option value="ENG">ENG (Inglaterra)</option>
+                        <option value="CRO">CRO (Croácia)</option>
+                        <option value="GHA">GHA (Gana)</option>
+                        <option value="PAN">PAN (Panamá)</option>
+                        <option value="FWC-SELECOES"> FWC (Seleções Especiais) </option>
+                        <option value="CC"> CC (Coca-Cola)</option>
+                    </select>
+                    <label for="figurinha-posicao"> Posição </label>
+                    <input type="text" id="figurinha-posicao" placeholder="Ex: Atacante">
+                    <label for="figurinha-camisa"> Número da Camisa </label>
+                    <input type="number" id="figurinha-camisa" placeholder="Ex: 10">
+                    <label for="figurinha-numero"> Número da Figurinha </label>
+                    <input type="text" id="figurinha-numero" placeholder="Ex: BRA15">
+                    <label for="figurinha-imagem"> Link da Imagem </label>
+                    <input type="url" id="figurinha-imagem" placeholder="https://...">
+                </div>
+
+                <button id="btn-cadastrar" class="btn-primary"> Adicionar Figurinha </button>
+            </section>
+
+            <section class="menu-view">
+                <h3>Figurinhas Cadastradas</h3>
+                <div class="figurinha-grid" id="figurinha-grid">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"> </script>
+
+</body>
+</html>
