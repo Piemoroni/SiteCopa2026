@@ -52,44 +52,6 @@ O sistema utiliza o serviço **Firebase Authentication** para realizar o login d
 
 ---
 
-## Como Executar
-
-### 1. Clonar o repositório
-
-```bash
-git clone URL_DO_REPOSITORIO
-```
-
-### 2. Instalar dependências
-
-```bash
-npm install
-```
-
-### 3. Configurar o Firebase
-
-Crie um projeto no Firebase e configure:
-
-- Authentication
-- Cloud Firestore
-- Hosting (opcional)
-
-Adicione as credenciais no arquivo:
-
-```javascript
-firebase-config.js
-```
-
-### 4. Executar o projeto
-
-```bash
-npm start
-```
-
-ou utilize uma extensão como Live Server.
-
----
-
 ## Objetivo
 
 O objetivo deste projeto é aplicar conceitos de desenvolvimento web moderno utilizando Firebase como Backend as a Service (BaaS), autenticação com Google e armazenamento em nuvem para gerenciamento de coleções digitais.
